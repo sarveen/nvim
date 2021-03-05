@@ -31,3 +31,5 @@ set nu rnu
 set clipboard=unnamed
 
 nnoremap // :noh<return>
+autocmd filetype cpp nnoremap <F12> :w <CR> : !python ../submit.py % <CR>
+autocmd filetype cpp nnoremap <F9> :w <CR> : !make %:t:r <CR>
