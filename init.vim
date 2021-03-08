@@ -6,6 +6,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -30,6 +32,9 @@ let g:airline_theme = 'gotham256'
 set nu rnu
 set clipboard=unnamed
 nnoremap // :noh<return>
+
+let g:airline#extensions#tabline#enabled = 1
+
 
 """ Competitive Programming Keybindings
 autocmd filetype cpp nnoremap <F7> :w <CR> : !python ../generate_testcases.py %:t:r <CR>
