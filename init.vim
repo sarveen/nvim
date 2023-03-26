@@ -24,11 +24,11 @@ let delimitMate_expand_space = 1
 set encoding=UTF-8
 set background=light
 set t_Co=256
-colorscheme lucid
+colorscheme gruvbox
 set termguicolors
 syntax on
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'gotham256'
+let g:airline_theme = 'gruvbox'
 set nu rnu
 set clipboard=unnamed
 nnoremap // :noh<return>
@@ -37,7 +37,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 
 """ Competitive Programming Keybindings
-autocmd filetype cpp nnoremap <F7> :w <CR> : !python ../generate_testcases.py %:t:r <CR>
-autocmd filetype cpp nnoremap <F8> :w <CR> : !make %:t:r <CR>
-autocmd filetype cpp nnoremap <F9> :w <CR> : !python ../submit.py % <CR>
+""" autocmd filetype cpp nnoremap <F7> :w <CR> : !python ../generate_testcases.py %:t:r <CR>
+""" autocmd filetype cpp nnoremap <F8> :w <CR> : !make %:t:r <CR>
+""" autocmd filetype cpp nnoremap <F9> :w <CR> : !python ../submit.py % <CR>
 
