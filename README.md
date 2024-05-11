@@ -1,2 +1,3 @@
-# nvim
-Init.vim for neovim
+# nvim configuration
+
+nvim configuration written in lua
