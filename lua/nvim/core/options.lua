@@ -4,11 +4,11 @@ local options = {
     -- clipboard
     clipboard = "unnamedplus",
     -- indentation
+    autoindent = true,
     expandtab = true,
     shiftwidth = 4,
-    tabstop = 4,
-    autoindent = true,
     smartindent = true,
+    tabstop = 4,
     -- lines
     wrap = false,
     -- search
@@ -18,7 +18,10 @@ local options = {
     termguicolors = true,
     background = "light",
     -- backspace
-    backspace = "indent,eol,start"
+    backspace = "indent,eol,start",
+    -- windows
+    splitright = true,
+    splitbelow = true,
 }
 
 for k, v in pairs(options) do
