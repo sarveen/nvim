@@ -40,6 +40,7 @@ local function setup()
         -- linters
         'eslint_d',
         'yamllint',
+        'actionlint',
         'golangci-lint'
       },
     })
