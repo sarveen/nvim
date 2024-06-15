@@ -33,6 +33,14 @@ local function setup()
 
     mason_tool_installer.setup({
       ensure_installed = {
+        -- formatters
+        'prettier',
+        'stylua',
+        'goimports',
+        -- linters
+        'eslint_d',
+        'yamllint',
+        'golangci-lint'
       },
     })
 end

@@ -6,9 +6,9 @@ local options = {
     -- indentation
     autoindent = true,
     expandtab = true,
-    shiftwidth = 4,
+    shiftwidth = 2,
     smartindent = true,
-    tabstop = 4,
+    tabstop = 2,
     -- lines
     wrap = false,
     -- search
