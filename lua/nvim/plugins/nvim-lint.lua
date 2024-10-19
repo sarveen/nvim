@@ -9,6 +9,7 @@ return {
       typescript = { "eslint_d" },
       yaml       = { "yamllint" },
       golang     = { "golangci-lint" },
+      terraform  = { "tflint" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

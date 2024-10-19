@@ -9,7 +9,9 @@ return {
     -- configure treesitter
     treesitter.setup({ -- enable syntax highlighting
       highlight = { enable = true },
-      indent = { enable = true} ,
+      indent = {
+        enable = true,
+      } ,
       -- ensure these language parsers are installed
       ensure_installed = {
         "json",
@@ -26,7 +28,8 @@ return {
         "cpp",
         "go",
         "python",
-        "java"
+        "java",
+        "terraform",
       },
     })
   end,

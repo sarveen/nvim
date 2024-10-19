@@ -28,6 +28,7 @@ local function setup()
         'clangd',
         'gopls',
         'jdtls',
+        'terraformls',
       },
     })
 
@@ -41,7 +42,8 @@ local function setup()
         'eslint_d',
         'yamllint',
         'actionlint',
-        'golangci-lint'
+        'golangci-lint',
+        'tflint',
       },
     })
 end

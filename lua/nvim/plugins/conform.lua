@@ -13,6 +13,7 @@ return {
         markdown = { "prettier" },
         lua = { "stylua" },
         golang = { "goimports" },
+        terraform = { "terraform_fmt" }
       },
     })
 

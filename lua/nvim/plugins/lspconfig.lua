@@ -27,7 +27,7 @@ local function setup()
     end
 
     -- Setup servers
-    local servers = { 'lua_ls', 'pyright', 'tsserver', 'clangd', 'gopls', 'jdtls' }
+    local servers = { 'lua_ls', 'pyright', 'tsserver', 'clangd', 'gopls', 'jdtls', 'terraformls' }
     for _, lsp in ipairs(servers) do
         lspconfig[lsp].setup {
             capabilities = capabilities,
