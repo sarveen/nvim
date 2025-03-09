@@ -13,7 +13,7 @@ return {
     }
     
     local function get_git_root()
-      local git_root = vim.fn.systemlist("git rev-parse --showtoplevel")[1]
+      local git_root = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
       return vim.v.shell_error == 0 and git_root or nil
     end
 
