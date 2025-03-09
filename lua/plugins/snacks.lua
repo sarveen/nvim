@@ -27,12 +27,16 @@ return {
     { "<leader>fr", function() Snacks.picker.recent() end, desc = "Find Recent Files" },
     { "<leader>fg", function() Snacks.picker.grep() end, desc = "Live Grep" },
     { "<leader>fp", function() Snacks.picker.projects() end, desc = "Find Projects" },
+    { "<leader>e", function() Snacks.explorer.open() end, desc = "Open File Explorer" },
 
     -- LSP Pickers
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
     { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
     { "gr", function() Snacks.picker.lsp_references() end, desc = "Goto References" },
     { "gi", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementations"},
+
+    -- Diagnostics Picker
+    { "<leader>od", function() Snacks.picker.diagnostics() end, desc = "View Diagnostics" },
 
     -- LazyGit
     { "<leader>ol", function() Snacks.lazygit.open() end, desc = "Open LazyGit"},
