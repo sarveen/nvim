@@ -21,11 +21,11 @@ return {
       local golangci_lint = lint.linters.golangcilint
       if not golangci_lint then return end
 
-      local config_file = get_git_root()
-        and (get_git_root() .. "/.golangci.yml")
+      local git_root = get_git_root()
+      local config_file = git_root and (git_root .. "/.golangci.yml")
 
       if config_file and vim.fn.filereadable(config_file) == 1 then
-        table.insert(golangci_lint.args, "--config=", config_file)
+        table.insert(golangci_lint.args, "--config=" .. config_file)
         table.insert(golangci_lint.args, "--new-from-rev=origin/main")
       end
     end
