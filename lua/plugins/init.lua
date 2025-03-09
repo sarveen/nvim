@@ -64,6 +64,12 @@ function M.setup()
     -- Search and Replace
     require("plugins.grug-far"),
 
+    -- DAP
+    require("plugins.dap"),
+
+    -- Neotest
+    require("plugins.neotest"),
+
   }
 
   require("lazy").setup(plugins, {})
