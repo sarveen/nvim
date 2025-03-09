@@ -3,11 +3,11 @@
 My personal neovim config which supports C, C++, Rust, Python and Golang
 
 ## Table of Contents
-- [🚀 Installation](#-installation)
+- [Installation](#-installation)
   - [Install Neovim](#install-neovim)
   - [Install Rust Nightly](#install-rust-nightly)
   - [Install Go Dependencies](#install-go-dependencies)
-- [⌨️ Keybindings](#-keybindings)
+- [Keybindings](#-keybindings)
   - [File Pickers](#file-pickers)
   - [LSP Pickers](#lsp-pickers)
   - [Diagnostics](#diagnostics)
