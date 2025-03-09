@@ -16,3 +16,4 @@ opt.termguicolors = true   -- enable 24-bit RGB colors
 opt.wrap = false           -- don't wrap lines
 opt.splitright = true      -- splits open on the right
 opt.splitbelow = true      -- splits open below
+opt.clipboard = "unnamedplus"

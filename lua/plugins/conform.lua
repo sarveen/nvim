@@ -1,6 +1,3 @@
--- ~/.config/nvim/lua/plugins/conform.lua
--- https://github.com/stevearc/conform.nvim
-
 return {
   "stevearc/conform.nvim",
   config = function()
@@ -10,13 +7,20 @@ return {
         c = { "clang_format" },
         cpp = { "clang_format" },
         rust = { "rustfmt" },
-        go = { "gofumpt", "golines" },
+        go = { "gofumpt", "gofmt", "gci", "goimports" },
+      },
+      formatters = {
+        go = {
+          run_all_formatters = true,
+        },
+        goimports = {
+          prepend_args = { "-local", "github.com/sarveen" }
+        },
       },
       -- Optionally define format on save, etc.
-      format_on_save = {
-        timeout_ms = 1000, -- adjust as needed
+      format_after_save = {
+        timeout_ms = 1000,
       },
     })
   end,
 }
-

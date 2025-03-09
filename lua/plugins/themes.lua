@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/plugins/themes.lua
-
 return {
   -- Gruvbox
   {
@@ -23,13 +21,11 @@ return {
     priority = 1000,
   },
 
-  -- Optionally, pick a default colorscheme to load:
+  -- "Set default theme"
   {
-    -- We'll just define a small config function to set a default theme
     "nvim-lua/plenary.nvim", -- a dummy plugin so we can set a config
     lazy = false,
     config = function()
-      -- Set your favorite theme by default
       vim.cmd([[colorscheme gruvbox]])
     end,
   },

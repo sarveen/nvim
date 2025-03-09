@@ -27,5 +27,22 @@ return {
     { "<leader>fr", function() Snacks.picker.recent() end, desc = "Find Recent Files" },
     { "<leader>fg", function() Snacks.picker.grep() end, desc = "Live Grep" },
     { "<leader>fp", function() Snacks.picker.projects() end, desc = "Find Projects" },
+
+    -- LSP Pickers
+    { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
+    { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
+    { "gr", function() Snacks.picker.lsp_references() end, desc = "Goto References" },
+    { "gi", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementations"},
+
+    -- LazyGit
+    { "<leader>ol", function() Snacks.lazygit.open() end, desc = "Open LazyGit"},
+
+    -- Git
+
+    { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Current Line"},
+
+    -- GitBrowse
+    { "<leader>gB", function() Snacks.gitbrowse.open() end, desc = "Open Repository in Browser"},
+    { "<leader>gU", function() Snacks.gitbrowse.get_url() end, desc = "Copy Repository URL"},
   }
 }

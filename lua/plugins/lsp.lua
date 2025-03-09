@@ -1,4 +1,3 @@
--- ~/.config/nvim/lua/plugins/lsp.lua
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
@@ -19,11 +18,10 @@ return {
         vim.keymap.set(mode, lhs, rhs, opts)
       end
 
-      bufmap("n", "gd", vim.lsp.buf.definition)
-      bufmap("n", "<leader>K", vim.lsp.buf.hover)
-      bufmap("n", "gr", vim.lsp.buf.references)
-      bufmap("n", "<leader>rn", vim.lsp.buf.rename)
-      bufmap("n", "<leader>ca", vim.lsp.buf.code_action)
+      -- LSP Actions
+      bufmap("n", "<leader>lh", vim.lsp.buf.hover)       -- LSP Show Hover
+      bufmap("n", "<leader>lr", vim.lsp.buf.rename)      -- LSP Rename Symbol
+      bufmap("n", "<leader>la", vim.lsp.buf.code_action) -- LSP Code Action
     end
 
     -- Signs
@@ -53,6 +51,19 @@ return {
       on_attach = on_attach,
       capabilities = capabilities,
     })
+
+    lspconfig.pyright.setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+    })
+
+    lspconfig.lua_ls.setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+    })
+
+
+
   end,
 }
 

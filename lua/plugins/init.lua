@@ -34,6 +34,9 @@ function M.setup()
     -- Formatter
     require("plugins.conform"),
 
+    -- Linting
+    require("plugins.nvim-lint"),
+
     -- Dressing
     require("plugins.dressing"),
 

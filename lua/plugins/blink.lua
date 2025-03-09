@@ -1,7 +1,3 @@
--- ~/.config/nvim/lua/plugins/blink_cmp.lua
--- https://github.com/Saghen/blink.cmp
---
--- Blink.cmp sets up nvim-cmp with sensible defaults, hooking into LSP, paths, buffers, etc.
 return {
   'saghen/blink.cmp',
   -- optional: provides snippets for the snippet source

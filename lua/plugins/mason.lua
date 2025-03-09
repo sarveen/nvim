@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/plugins/mason.lua
-
 return {
   "williamboman/mason.nvim",
   dependencies = {
@@ -11,14 +9,15 @@ return {
     require("mason-lspconfig").setup({
       -- This ensures these servers are always installed
       ensure_installed = {
+        "clangd",
         "rust_analyzer",
         "gopls",
-        "clangd",
+        "pyright",
+        "lua_ls",
       },
     })
 
     require("mason-tool-installer").setup({
-      -- Tools you want to ensure are installed for format/lint
       ensure_installed = {
         -- C/C++
         "clang-format",
@@ -27,9 +26,15 @@ return {
         -- Rust
         -- "rustfmt", installed via rustup now
 
+        -- Python
+        "black",
+
         -- Go
         "gofumpt",
-        "golines",
+        "gci",
+
+        -- Lua
+        "luacheck",
       },
       auto_update = false,
       run_on_start = true,
