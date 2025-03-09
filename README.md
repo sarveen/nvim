@@ -1,8 +1,8 @@
-# 📝 Neovim Configuration
+# Neovim Configuration
 
 My personal neovim config which supports C, C++, Rust, Python and Golang
 
-## 📌 Table of Contents
+## Table of Contents
 - [🚀 Installation](#-installation)
   - [Install Neovim](#install-neovim)
   - [Install Rust Nightly](#install-rust-nightly)
@@ -17,7 +17,7 @@ My personal neovim config which supports C, C++, Rust, Python and Golang
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### **Install Neovim**
 To install Neovim via Homebrew:
@@ -47,7 +47,7 @@ brew install golangci-lint
 
 ---
 
-## ⌨️ Keybindings
+## Keybindings
 
 ### **File Pickers**
 | Keybinding | Action |
