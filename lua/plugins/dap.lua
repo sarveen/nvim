@@ -59,7 +59,7 @@ return {
 
       dap.configurations.cpp = {
         {
-          name = "Launch File",
+          name = "Debug Current File",
           type = "lldb",
           request = "launch",
           program = function()
@@ -93,7 +93,7 @@ return {
 
       dap.configurations.rust = {
         {
-          name = "Debug Rust Program",
+          name = "Debug Current File",
           type = "lldb",
           request = "launch",
           program = function()
