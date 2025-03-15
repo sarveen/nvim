@@ -17,8 +17,29 @@ return {
     -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
     -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
     -- See the full "keymap" documentation for information on defining your own keymap.
-    keymap = { preset = 'enter' },
+    keymap = {
+      preset = "none", -- Disable presets to define custom mappings
 
+      -- Tab: Navigate to the next completion item or snippet placeholder
+      ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+
+      -- Shift-Tab: Navigate to the previous completion item or snippet placeholder
+      ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+
+      -- Enter: Accept the selected completion
+      ["<CR>"] = { "accept", "fallback" },
+
+      -- Additional key mappings
+      ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+      ["<C-e>"] = { "hide", "fallback" },
+      ["<Up>"] = { "select_prev", "fallback" },
+      ["<Down>"] = { "select_next", "fallback" },
+      ["<C-p>"] = { "select_prev", "fallback_to_mappings" },
+      ["<C-n>"] = { "select_next", "fallback_to_mappings" },
+      ["<C-b>"] = { "scroll_documentation_up", "fallback" },
+      ["<C-f>"] = { "scroll_documentation_down", "fallback" },
+      ["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
+    },
     appearance = {
       -- Sets the fallback highlight groups to nvim-cmp's highlight groups
       -- Useful for when your theme doesn't support blink.cmp

@@ -2,6 +2,8 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = {
     "saghen/blink.cmp",
+    "L3MON4D3/LuaSnip",
+    "rafamadriz/friendly-snippets"
   },
   config = function()
     local lspconfig = require("lspconfig")
@@ -24,6 +26,13 @@ return {
       bufmap("n", "<leader>la", vim.lsp.buf.code_action) -- LSP Code Action
     end
 
+    local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+
+    for type, icon in pairs(signs) do
+      local hl = "DiagnosticSign" .. type
+      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+    end
+
     -- Signs
     vim.diagnostic.config({
       virtual_text = {
@@ -40,6 +49,25 @@ return {
     lspconfig.clangd.setup({
       on_attach = on_attach,
       capabilities = capabilities,
+      lspconfig.clangd.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        cmd = {
+          "clangd",
+          "--background-index",
+          "--clang-tidy",
+          "--completion-style=detailed",
+          "--header-insertion=iwyu",
+          "--function-arg-placeholders",
+        },
+        init_options = {
+          usePlaceholders = true,
+          clangdFileStatus = true,
+          inlayHints = {
+            enabled = true,
+          },
+        },
+      })
     })
 
     lspconfig.rust_analyzer.setup({
@@ -50,6 +78,23 @@ return {
     lspconfig.gopls.setup({
       on_attach = on_attach,
       capabilities = capabilities,
+      settings = {
+        gopls = {
+          usePlaceholders = true,
+          completeUnimported = true,
+          staticcheck = true,
+
+          hints = {
+            assignVariableTypes = true,
+            compositeLiteralFields = true,
+            constantValues = true,
+            functionTypeParameters = true,
+            parameterNames = true,
+            rangeVariableTypes = true,
+          },
+          semanticTokens = true,
+        },
+      },
     })
 
     lspconfig.pyright.setup({

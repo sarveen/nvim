@@ -26,6 +26,7 @@ return {
     { "<leader>fs", function() Snacks.picker.lsp_workspace_symbols() end, desc = "Find LSP Symbols" },
     { "<leader>fr", function() Snacks.picker.recent() end, desc = "Find Recent Files" },
     { "<leader>fg", function() Snacks.picker.grep() end, desc = "Live Grep" },
+    { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
     { "<leader>fp", function() Snacks.picker.projects() end, desc = "Find Projects" },
     { "<leader>e", function() Snacks.explorer.open() end, desc = "Open File Explorer" },
 

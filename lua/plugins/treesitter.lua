@@ -12,6 +12,7 @@ return {
         "rust",
         "go",
         "lua",
+        "python",
       },
       highlight = {
         enable = true,
