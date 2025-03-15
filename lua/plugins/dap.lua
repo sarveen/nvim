@@ -24,6 +24,13 @@ return {
         },
       })
 
+      local function dap_continue_fixed()
+        vim.api.nvim_set_hl(0, "StatusLine", { link = "Normal" })
+        vim.api.nvim_set_hl(0, "StatusLineNC", { link = "NormalNC" })
+        dap.continue()
+      end
+
+
       dap.listeners.after.event_initialized["dapui_config"] = function()
         dapui.open()
       end
@@ -39,12 +46,12 @@ return {
       dap_vscode.load_launchjs()
 
       -- Debug Keybindings
-      vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "Start/Continue Debugging" })
+      vim.keymap.set("n", "<leader>dc", dap_continue_fixed, { desc = "Start/Continue Debugging" })
       vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Toggle Breakpoint" })
       vim.keymap.set("n", "<leader>ds", dap.step_over, { desc = "Step Over" })
       vim.keymap.set("n", "<leader>di", dap.step_into, { desc = "Step Into" })
       vim.keymap.set("n", "<leader>do", dap.step_out, { desc = "Step Out" })
-      vim.keymap.set("n", "<leader>dt", dapui.open)
+      vim.keymap.set("n", "<leader>dt", dapui.toggle, { desc = "Toggle Dap UI" })
 
       -- C/C++/Rust
        dap.adapters.lldb = {
